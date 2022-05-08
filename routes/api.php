@@ -19,5 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('twitter-query/{search}', [\App\Http\Controllers\TwitterController::class, 'searchTweets']);
+Route::get('twitter-query-all/{search}', [\App\Http\Controllers\TwitterController::class, 'searchAllTweets']);
 Route::get('search-user-by-id/{id}', [\App\Http\Controllers\TwitterController::class, 'searchUserById']);
 Route::get('search-user-by-username/{username}', [\App\Http\Controllers\TwitterController::class, 'searchUserByUsername']);
